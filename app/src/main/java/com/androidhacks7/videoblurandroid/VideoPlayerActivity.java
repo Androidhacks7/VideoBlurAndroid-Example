@@ -36,12 +36,12 @@ public class VideoPlayerActivity extends AppCompatActivity {
             int width = Integer.parseInt(mRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH));
             int height = Integer.parseInt(mRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT));
 
-            //divide the width and height by 5
+            //divide the width and height by 3
             width /= 3;
             height /= 3;
 
             setContentView(R.layout.activity_video_player);
-            //set the size of the surface to play on to 1/5 the width and height
+
             mVideoView = findViewById(R.id.video_surface_view);
             mVideoView.getHolder().setFixedSize(width, height);
             mMediaPlayer.setDataSource(assetFileDescriptor.getFileDescriptor(),
